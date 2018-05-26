@@ -1,0 +1,127 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: aquamarine;
+}
+div{
+    box-sizing: border-box;
+}
+
+.contact-container{
+    padding: 0;
+    width: 40vw;
+    min-width: 300px;
+    margin: 20px auto;
+    perspective: 1000px;
+    min-height: 300px;
+    height: 40vw;
+}
+
+.contact-container > h3{
+    position: absolute;
+    font-family:Helvetica, sans-serif;
+    text-align: center;
+    font-weight: lighter;
+    width: 100%;
+    padding-top: 30%;
+    color: rgba(0, 0, 0, 0.45);
+
+}
+
+.contact-card{
+    padding: 10px;
+    min-width: 300px;
+    min-height: 300px;
+    width: 40vw;
+    height: 40vw;
+    border-radius: 2px;
+    background-color: white;
+    position: absolute;
+}
+
+.card-animate-in{
+    animation: swing-down 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    transform-origin: top left;
+}
+
+.card-animate-out{
+    z-index: 3;
+    animation: fall-down 0.7s linear forwards;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card button{
+    float: right;
+    border: none;
+    border-radius: 2px;
+    background-color: crimson;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-family:Helvetica, sans-serif;
+    font-weight: lighter;
+}
+.contact-card h3{
+    font-family:Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+.contact-status{
+    width: 40vw;
+    min-width: 300px;
+    height: 5vw;
+    min-height: 37.5px;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    z-index: 3;
+    position: relative;
+    top: 10px;
+}
+
+.page-container{
+    width: 50px;
+    height: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.page{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #bbb;
+    transition: background-color 0.4s ease-out;
+}
+
+.contact-card-content{
+    background-color: #eee;
+    height: 65%;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+@keyframes swing-down {
+    0% {
+        opacity: 0;
+        transform: rotateX(-90deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
+}
+
+@keyframes fall-down {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100vh) rotateZ(10deg);
+    }
+}

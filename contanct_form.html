@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/form-animation.js"></script>
+    <title>Contact Form</title>
+</head>
+<body>
+    <div class="contact-container">
+        <div class="contact-status">
+            <div class="page-container">
+                <div class="page" id="p_1" style="background-color: #333;"></div>
+                <div class="page" id="p_2"></div>
+                <div class="page" id="p_3"></div>
+            </div>
+        </div>
+
+        <h3 style="opacity: 0;" id="end_message">Thank You</h3>
+    
+        <div class="contact-card" id="card_3" style="display: none;">
+            <h3>Step 3</h3>
+            <div class="contact-card-content">
+
+            </div>
+            <button onclick="handleNextClick(3)">done</button>
+        </div>
+    
+        <div class="contact-card" id="card_2" style="display: none;">
+            <h3>Step 2</h3>
+            <div class="contact-card-content">
+                
+            </div>
+            <button onclick="handleNextClick(2)">next</button>
+        </div>
+    
+        <div class="contact-card card-animate-in" id="card_1">
+            <h3>Step 1</h3>
+            <div class="contact-card-content">
+                
+            </div>
+            <button onclick="handleNextClick(1)">next</button>
+        </div>
+
+    </div>
+    
+</body>
+</html>
